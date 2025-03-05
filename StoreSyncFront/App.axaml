@@ -1,0 +1,27 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
+             x:Class="StoreSyncFront.App"
+             xmlns:local="using:StoreSyncFront"
+             xmlns:viewModels="clr-namespace:StoreSyncFront.ViewModels"
+             RequestedThemeVariant="Default">
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+
+    <Application.Styles>
+        <themes:CustomMaterialTheme>
+            <themes:CustomMaterialTheme.Palettes>
+                <themes:CustomMaterialThemeResources x:Key="Dark"
+                                                     PrimaryColor="#EECD5C"
+                                                     SecondaryColor="#1D1912" />
+                <themes:CustomMaterialThemeResources x:Key="Light"
+                                                     PrimaryColor="#F3F3E6"
+                                                     SecondaryColor="#BB8525" />
+            </themes:CustomMaterialTheme.Palettes>
+        </themes:CustomMaterialTheme>
+    </Application.Styles>
+</Application>
